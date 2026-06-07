@@ -440,7 +440,7 @@
 
     <div id="loader">
         <div class="heart-loader"></div>
-        <p class="loader-text">Preparing something special...</p>
+        <p class="loader-text">Preparing something friendly...</p>
     </div>
 
 
@@ -449,11 +449,10 @@
 
     <div class="wrap">
         <div id="messages">
-            <div id="m1" class="msg purple">I don’t know you deeply yet, but something about you caught my attention the
-                first moment I saw you.</div>
-            <div id="m2" class="msg blue">Even though we’ve barely talked, you have a really warm presence.</div>
-            <div id="m3" class="msg pink">I saw you once, and somehow you stayed in my mind.</div>
-            <div id="m4" class="msg purple">So… I wanted to ask you something — gently.</div>
+            <div id="m1" class="msg purple">We haven’t known each other long, but you give off a really positive vibe.</div>
+            <div id="m2" class="msg blue">You seem like someone who’s easy to talk to and genuinely kind.</div>
+            <div id="m3" class="msg pink">Even from a small interaction, you left a good impression on me.</div>
+            <div id="m4" class="msg purple">So… I wanted to ask you something simple and friendly.</div>
         </div>
 
         <button class="start-btn" id="startBtn" aria-label="Start the surprise">Start the surprise ✨</button>
@@ -471,11 +470,12 @@
                 </div>
             </div>
             <div class="card-right">
-                <div class="ask-text" id="askText">Would you like to be my girlfriend?</div>
+                <div class="ask-text" id="askText">Would you like to be my friend?</div>
                 <div class="buttons" id="actions">
                     <button class="btn btn-yes" id="btnYes">Yes — I’d love to 💜</button>
-                    <button class="btn btn-friend" id="btnFriend">Let’s stay friends / I need time 🤍</button>
-                    <button class="btn btn-no" id="btnNo">No — I’m sorry 😔</button>
+                    <button class="btn btn-friend" id="btnFriend">Maybe! Let’s get to know each other 🤍</button>
+                    <button class="btn btn-no" id="btnNo">Not right now — but thank you 💙
+</button>
                 </div>
             </div>
         </div>
@@ -656,7 +656,7 @@
         btnYes.addEventListener('click', () => {
             // change bg to romantic and start infinite fireworks
             setBgState('yes');
-            askText.innerText = "You said yes! 💜 I'm so happy — let's plan something soon ✨";
+            askText.innerText = "You said yes! 💜 I’m really glad — looking forward to being friends ✨";
             actions.style.display = 'none';
             cardArea.style.transform = 'scale(1.02)';
             confettiBurst();
@@ -665,7 +665,7 @@
 
         btnFriend.addEventListener('click', () => {
             setBgState('friend');
-            askText.innerText = "No problem — I value your time. Let's stay friends 💫";
+            askText.innerText = "That’s totally cool — we can take things slow and just vibe 💫";
             actions.style.display = 'none';
             // subtle gentle confetti once
             confettiBurst();
@@ -675,7 +675,7 @@
 
         btnNo.addEventListener('click', () => {
             setBgState('no');
-            askText.innerText = "Thanks for being honest — I respect that. Take care 💙";
+            askText.innerText = "Thanks for being honest — I appreciate it. Wishing you good vibes 💙";
             actions.style.display = 'none';
             stopFireworks();
         });
